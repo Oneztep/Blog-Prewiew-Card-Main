@@ -1,0 +1,145 @@
+@import url(https://fonts.google.com/specimen/Figtree);
+
+:root{
+--Yellow: hsl(47, 88%, 63%);
+--White: hsl(0, 0%, 100%);
+
+--Gray-500: hsl(0, 0%, 42%);
+--Gray-950: hsl(0, 0%, 7%);
+--font1: 500;
+--font2: 800;
+}
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Aun falta cambio de la fuente, el font family correcto  */
+body{
+  height: 812px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 100px;
+  background-color: var(--Yellow);
+  font-family:'figtree', light, sans-serif;
+}
+.container{
+  position: relative;
+}
+.cart-black {
+  position: absolute;
+  right: -5px;
+  top: 5px;
+  height: 503px;
+  width: 327px;
+  border-radius: 20px;
+  background-color: var(--Gray-950);
+  z-index: -1;
+  transition: width .2s ease ;
+}
+
+.cart-container{
+  height: 503px;
+  width: 327px;
+  padding: 26px; 
+  border-radius:20px ;
+  border: 3px solid var(--Gray-950);
+  background-color: var(--White);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: width .2s ease ;
+}
+
+.container__image{
+  height: 198px;
+  width: 269px;
+  background-image: url(assets/images/illustration-article.svg);
+  background-size: cover;
+  background-position-x: -25px;
+  border-radius: 10px;
+  transition: width .2s ease ;
+}
+.container__description{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 169px;
+}
+
+.state{
+  width: 74px;
+  height: 27px;
+  background-color: var(--Yellow);
+  border-radius: 4px;
+  color: var(--Gray-950);
+  display: flex;
+  justify-content: center;
+  padding-top: 5px;
+  font-size: 0.8em;
+  font-weight: 800;
+  
+}
+body .container .cart-container .container__description .date{
+  font-size: 0.7em;
+}
+
+body .container .cart-container .container__description .tittle{
+  font-size: 1.2em;
+  font-weight: 800;
+  color: var(--Gray-950);
+  width: 230px;
+  transition: font-size, .2s ease ;
+}
+
+body .container .cart-container .container__description .tittle:hover{
+  color: var(--Yellow);
+  cursor: pointer;
+}
+
+body .container .cart-container .container__description .description{
+  font-size: 1em;
+  color: var(--Gray-500);
+}
+
+.container__user{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.user-avatar{
+  height: 32px;
+  width: 32px;
+}
+
+body .container .cart-container .name-user{
+  font-size: 0.9em;
+  font-weight: 800;
+}
+
+
+@media ( min-width: 1114px) {
+  .cart-container{
+    height: 519;
+    width: 382px;
+  }
+  .cart-black{
+    height: 519;
+    width: 382px;
+  }
+  .container__image{
+    height: 198px;
+    width: 324px;
+    background-position-x: 0;
+  }
+  body .container .cart-container .container__description .tittle{
+    font-size: 1.2em;
+    width: 230px;
+  }
+
+}
